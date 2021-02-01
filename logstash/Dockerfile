@@ -7,6 +7,6 @@ COPY ./pipeline /usr/share/logstash/pipeline
 
 USER root
 
-RUN echo "Asia/Shanghai" > /etc/timezone
+RUN echo "Asia/Taipei" > /etc/timezone
 
 USER logstash

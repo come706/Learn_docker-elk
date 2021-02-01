@@ -4,3 +4,7 @@
 
 - pipeline.id: mysql.slow
   path.config: "/usr/share/logstash/pipeline/mysql.slow.conf"
+
+- pipeline.id: core.app
+  path.config: "/usr/share/logstash/pipeline/core.app.conf"
+

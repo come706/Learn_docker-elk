@@ -6,6 +6,6 @@ COPY ./config/kibana.yml /usr/share/kibana/config/kibana.yml
 
 USER root
 
-RUN echo "Asia/Shanghai" > /etc/timezone
+RUN echo "Asia/Taipei" > /etc/timezone
 
 USER kibana

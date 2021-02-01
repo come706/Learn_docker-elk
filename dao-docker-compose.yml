@@ -62,7 +62,7 @@ services:
     - /proc:/hostfs/proc:ro
     - /sys/fs/cgroup:/hostfs/sys/fs/cgroup:ro
     - /:/hostfs:ro
-    -  /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime:ro
+    -  /usr/share/zoneinfo/Asia/Taipei:/etc/localtime:ro
     user: root
     network_mode: host
     depends_on:
@@ -78,7 +78,7 @@ services:
     volumes:
     - /root/app/docker-elk/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
     - /root/app/docker-elk/nginx/conf.d:/etc/nginx/conf.d:ro
-    -  /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime:ro
+    -  /usr/share/zoneinfo/Asia/Taipei:/etc/localtime:ro
     ports:
     - 80:80
     - 443:443
@@ -97,7 +97,7 @@ services:
       - /root/app/docker-elk/mariadb/conf.d:/etc/mysql/conf.d:ro
       - /root/app/docker-elk/mariadb/my.cnf:/etc/mysql/my.cnf:ro
       - mysqllog:/var/log/mysql
-      -  /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime:ro
+      -  /usr/share/zoneinfo/Asia/Taipei:/etc/localtime:ro
     ports:
       - "3306:3306"
     networks:
@@ -113,7 +113,7 @@ services:
     volumes:
       - redisdata:/data
       - /root/app/docker-elk//redis.conf:/usr/local/etc/redis/redis.conf
-      -  /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime:ro
+      -  /usr/share/zoneinfo/Asia/Taipei:/etc/localtime:ro
     ports:
       - "6379:6379"
     networks: 

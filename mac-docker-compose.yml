@@ -64,7 +64,7 @@ services:
       - ./metricbeat/metricbeat.yml:/usr/share/metricbeat/metricbeat.yml:ro
       - ./metricbeat/modules.d:/usr/share/metricbeat/modules.d:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      -  /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime:ro
+      -  /usr/share/zoneinfo/Asia/Taipei:/etc/localtime:ro
     user: "root"
     network_mode: host
     depends_on:
@@ -80,7 +80,7 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
-      -  /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime:ro
+      -  /usr/share/zoneinfo/Asia/Taipei:/etc/localtime:ro
     ports:
       - "80:80"
       - "443:443"
@@ -99,7 +99,7 @@ services:
       - mysqldata:/var/lib/mysql
       - ./mariadb/conf.d:/etc/mysql/conf.d:ro
       - ./mariadb/my.cnf:/etc/mysql/my.cnf:ro
-      -  /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime:ro
+      -  /usr/share/zoneinfo/Asia/Taipei:/etc/localtime:ro
       - mysqllog:/var/log/mysql
     ports:
       - "3306:3306"
@@ -116,7 +116,7 @@ services:
     container_name: redis
     volumes:
       - redisdata:/data
-      -  /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime:ro
+      -  /usr/share/zoneinfo/Asia/Taipei:/etc/localtime:ro
     ports:
       - "6379:6379"
     networks: 
