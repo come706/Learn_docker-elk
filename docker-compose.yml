@@ -133,7 +133,7 @@ services:
       context: filebeat/
     container_name: filebeat
     volumes:
-      - "/D/spgateway/core/log/log/ELK_LOG:/var/log/website"
+      - "/D/log/:/var/log/website"
       #-  /usr/share/zoneinfo/Asia/Taipei:/etc/localtime:ro
     user: "root"
     network_mode: host
